@@ -1,0 +1,225 @@
+
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+$mainColor: rgb(40, 53, 84);
+$secondaryColor: rgb(71, 97, 128);
+
+.main {
+  margin-top: 0px;
+  padding: 0;
+  width: 100%;
+  background-color: $mainColor;
+  height: 810px
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  border-top: 1px solid white;
+}
+.line {
+  width: 90%;
+  height: 2px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0px;
+  border-top: 1.5px solid white;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  color: white;
+  padding-left: 45%;
+}
+
+.navLinks li {
+  padding-left: 7rem;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+}
+
+.hi {
+  color: white;
+  margin-left: 8%;
+  margin-top: 200px;
+  position: absolute;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 60px;
+}
+
+.info {
+  color: white;
+  position: absolute;
+  margin-left: 8%;
+  margin-top: 330px;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+
+.drawing {
+  max-width: 105%;
+  background-color: rgb(40, 53, 84);
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 810px
+
+}
+
+.skills {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.right {
+  padding-top: 80px;
+  background-color: $mainColor;
+  width: 100%;
+
+
+}
+
+.left {
+  padding-top: 100px;
+  background-color: $secondaryColor;
+  width: 100%;
+
+}
+.skillGrid {
+  width: 74%;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-top: 10%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: .5em;
+  column-gap: .5em;
+
+
+}
+
+.photoGrid {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.goodAt {
+  margin-top: 10%;
+  height: 60%;
+  width: 74%;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+
+.goodAt h1 {
+  color: white;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 40px;
+
+}
+
+.iconGrid {
+  margin-top: 2%;
+  width: 90%;
+  margin-right: 10%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 1em;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+}
+
+.projects {
+  width: 100%;
+  text-align:center;
+  background-color: rgb(248,248,255)
+}
+
+.projects h1 {
+  padding-top: 10vh;
+  margin-bottom: 10vh;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.carousel {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.project {
+  align-content: left;
+  text-align: left;
+}
+.project h3 {
+  margin-bottom: 4vh;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.project div {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+}
+.projectInfo {
+  width: 75%;
+  margin-right: 25%;
+  margin-top: 3vh;
+}
+
+
+
+.image {
+  width: 80%;
+  height: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.image img {
+  height: auto;
+  max-width: 100%;
+}
+
+.imageNums {
+  margin-top: 5vh;
+  display: flex;
+  list-style: none;
+  margin-right: 10%;
+  margin-left: 10%;
+  justify-content: space-between;
+}
+
+.num {
+  width: 20%;
+  border-bottom: 2px solid gray;
+  text-align: right;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
