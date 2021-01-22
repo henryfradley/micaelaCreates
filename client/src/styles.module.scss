@@ -2,15 +2,21 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
-$mainColor: rgb(40, 53, 84);
-$secondaryColor: rgb(71, 97, 128);
+$mainColor: #2C353C;
+$mainContrast: #3D444A;
+$secondaryColor: #6A7E86;
+$brown: #A17B6C;
+$lightBlue: #B1C2CC;
+$tan: #EAE5D5;
+$offWhite: #FDFBF5;
+
 
 .main {
   margin-top: 0px;
   padding: 0;
   width: 100%;
   background-color: $mainColor;
-  height: 810px
+  height: 100vh;
 
 }
 .nav {
@@ -32,7 +38,7 @@ $secondaryColor: rgb(71, 97, 128);
 .navLinks {
   display: flex;
   list-style: none;
-  color: white;
+  color: $offWhite;
   padding-left: 45%;
 }
 
@@ -43,7 +49,7 @@ $secondaryColor: rgb(71, 97, 128);
 }
 
 .hi {
-  color: white;
+  color: $offWhite;
   margin-left: 8%;
   margin-top: 200px;
   position: absolute;
@@ -53,7 +59,7 @@ $secondaryColor: rgb(71, 97, 128);
 }
 
 .info {
-  color: white;
+  color: $offWhite;
   position: absolute;
   margin-left: 8%;
   margin-top: 330px;
@@ -65,18 +71,17 @@ $secondaryColor: rgb(71, 97, 128);
 
 .drawing {
   max-width: 105%;
-  background-color: rgb(40, 53, 84);
+  background-color: $mainColor;
   overflow: hidden;
   margin-top: 0px;
   margin-bottom: 0px;
-  height: 810px
+  height: 100vh;
 
 }
 
 .skills {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -91,7 +96,7 @@ $secondaryColor: rgb(71, 97, 128);
 
 .left {
   padding-top: 100px;
-  background-color: $secondaryColor;
+  background-color: $mainContrast;
   width: 100%;
 
 }
@@ -125,7 +130,7 @@ $secondaryColor: rgb(71, 97, 128);
 
 
 .goodAt h1 {
-  color: white;
+  color: $offWhite;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 40px;
@@ -145,21 +150,23 @@ $secondaryColor: rgb(71, 97, 128);
 .icon {
   width: 100%;
   height: 100%;
-  border: 2px solid white;
+  border: 2px solid $offWhite;
 }
 
 .projects {
   width: 100%;
   text-align:center;
-  background-color: rgb(248,248,255)
+  background-color: rgb(248,248,255);
+  padding-bottom: 50px;
 }
 
 .projects h1 {
-  padding-top: 10vh;
-  margin-bottom: 10vh;
+  padding-top: 12vh;
+  margin-bottom: 20vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 50px;
+  color: $secondaryColor;
 }
 
 .carousel {
@@ -180,14 +187,17 @@ $secondaryColor: rgb(71, 97, 128);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 24px;
+  color: $secondaryColor;
 }
 
 .project div {
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+  color: $mainColor;
+
 }
 .projectInfo {
-  width: 75%;
+  width: 65%;
   margin-right: 25%;
   margin-top: 3vh;
 }
@@ -217,9 +227,108 @@ $secondaryColor: rgb(71, 97, 128);
 
 .num {
   width: 20%;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid $mainColor;
+  padding-bottom: 1vh;
   text-align: right;
   cursor: pointer;
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  font-style: thin;
+  color: $mainColor;
+}
+
+
+.aboutMe {
+  width: 100%;
+  height: 100vh;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.profileImage img {
+  width: 100%;
+  margin-bottom: 0;
+  overflow: hidden;
+
+}
+
+.aboutDetails {
+  width: 100%;
+  height: 100vh;
+  background-color: $mainColor;
+}
+
+.aboutDetails h1 {
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 60px;
+  color: $offWhite;
+  margin-top: 20%;
+  margin-left: 15%;
+}
+
+.aboutDetails p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color: $offWhite;
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 45%;
+}
+
+.favorites {
+  width: 50%;
+  margin-left: 15%;
+  margin-top: 5vh;
+  border: 1.5px solid white;
+}
+.favBox {
+  padding-top: 5%;
+  padding-bottom: 3%;
+
+}
+.favorites p {
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin-left: 7%;
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+
+.tools {
+  width: 100%;
+  height: 80vh;
+}
+
+.myTools {
+  width: 100%;
+  height: 50%;
+  background-color: $lightBlue;
+  color: $mainColor;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.tech {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(231, 219, 219);
+
 }

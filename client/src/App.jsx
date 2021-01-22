@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import Main from '../components/Main.jsx';
 import Skills from '../components/Skills.jsx';
 import Projects from '../components/Projects.jsx';
+import About from '../components/About.jsx';
+import Tools from '../components/Tools.jsx';
 
 
 class App extends React.Component {
@@ -12,6 +14,11 @@ class App extends React.Component {
     super(props)
     this.state = {
       data: {
+        form: {
+          name: '',
+          email: '',
+          message: ''
+        },
         aloha: {
           name: 'ALOHA GARDENER',
           mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -20,6 +27,15 @@ class App extends React.Component {
         }
       }
     }
+    this.handleChange =  this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    console.log(event.target.value)
+
+
+
+
   }
 
 
@@ -29,6 +45,8 @@ class App extends React.Component {
         <Main />
         <Skills />
         <Projects data={this.state.data} />
+        <About />
+        <Tools />
 
       </div>
     )
