@@ -21,8 +21,7 @@ const Main = function() {
       <div className={styles.line}></div>
       <h1 className={styles.hi}>HI. I'M MICAELA,</h1>
       <h3 className={styles.info}>A GRAPHIC DESIGNER BASED IN HONOLULU, HI.</h3>
-
-        <img src={illustration} className={styles.drawing}/>
+      <img src={illustration} className={styles.drawing}/>
 
     </div>
   )
