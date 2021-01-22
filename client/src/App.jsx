@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import axios from 'axios';
 
 import Main from '../components/Main.jsx';
 import Skills from '../components/Skills.jsx';
@@ -40,9 +40,7 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.name)
-    console.log(this.state.email)
-    console.log(this.state.message)
+
   }
 
 
