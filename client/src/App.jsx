@@ -9,6 +9,7 @@ import About from '../components/About.jsx';
 import Tools from '../components/Tools.jsx';
 import Form from '../components/Form.jsx';
 import Thanks from '../components/Thanks.jsx';
+import Foot from '../components/Foot.jsx';
 
 
 class App extends React.Component {
@@ -90,6 +91,7 @@ class App extends React.Component {
         <About />
         <Tools />
         <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} showForm={this.state.showForm}/>
+        <Foot scroll={this.scroll} />
 
       </div>
     )
