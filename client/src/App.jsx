@@ -7,7 +7,8 @@ import Skills from '../components/Skills.jsx';
 import Projects from '../components/Projects.jsx';
 import About from '../components/About.jsx';
 import Tools from '../components/Tools.jsx';
-import Form from '../components/Form.jsx'
+import Form from '../components/Form.jsx';
+import Thanks from '../components/Thanks.jsx';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
         name: '',
         email: '',
         message: '',
+        showForm: true,
       data: {
         aloha: {
           name: 'ALOHA GARDENER',
@@ -28,7 +30,10 @@ class App extends React.Component {
     }
     this.handleChange =  this.handleChange.bind(this);
     this.handleSubmit =  this.handleSubmit.bind(this);
+    this.scroll = this.scroll.bind(this);
   }
+
+
 
   handleChange(event) {
     event.preventDefault();
@@ -40,6 +45,38 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    axios({
+      method: 'POST',
+      url: '/send',
+      data: {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+      }
+    })
+    .then(res => {
+      if (res.data.status === 'success') {
+        this.setState({
+          showForm: false
+        })
+      } else {
+        alert("Sorry your message failed to send")
+      }
+    })
+  }
+
+  // resetForm() {
+  //   this.setState({
+  //     name: '',
+  //     email: '',
+  //     message: ''
+  //   })
+
+
+  scroll(event) {
+    let name = event.target.getAttribute('name');
+    const page = document.querySelector(`#${name}`)
+    page.scrollIntoView({ behavior: 'smooth', block: 'center' })
 
   }
 
@@ -47,12 +84,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Main />
+        <Main scroll={this.scroll} />
         <Skills />
         <Projects data={this.state.data} />
         <About />
         <Tools />
-        <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} showForm={this.state.showForm}/>
 
       </div>
     )

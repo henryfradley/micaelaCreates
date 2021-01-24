@@ -1,9 +1,6 @@
-#nodemodules
-
 node_modules
+### node etc ###
 
+#keys
 
-
-
-
-
+dev_config.js

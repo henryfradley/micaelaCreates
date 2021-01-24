@@ -8,7 +8,7 @@ const Skills = function() {
 
   return (
 
-    <div className={styles.skills}>
+    <div className={styles.skills} id="skills">
       <div className={styles.left}>
         <div className={styles.skillGrid}>
           <div className={styles.photoGrid}></div>

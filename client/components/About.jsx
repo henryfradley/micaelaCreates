@@ -5,7 +5,7 @@ import styles from '../src/styles.module.scss';
 const About = () => {
 
   return (
-    <div className={styles.aboutMe}>
+    <div className={styles.aboutMe} id="about">
       <div className={styles.aboutGrid}>
         <div className={styles.profileImage}>
           <img alt="profile" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/_DSC6406.jpg"></img>

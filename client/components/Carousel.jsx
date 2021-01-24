@@ -27,13 +27,13 @@ const Carousel = function(props) {
           <li className={styles.imageNums}>
             <ul onClick={() =>
               setIndex(0)}
-              className={styles.num}>01</ul>
+              className={styles.num}>01<div className={styles.slider}></div></ul>
             <ul onClick={() =>
-              setIndex(1)}className={styles.num}>02</ul>
+              setIndex(1)}className={styles.num}>02<div className={styles.slider}></div></ul>
             <ul onClick={() =>
-              setIndex(2)} className={styles.num}>03</ul>
+              setIndex(2)} className={styles.num}>03<div className={styles.slider}></div></ul>
             <ul onClick={() =>
-              setIndex(3)} className={styles.num}>04</ul>
+              setIndex(3)} className={styles.num}>04<div className={styles.slider}></div></ul>
           </li>
       </div>
     </div>

@@ -9,12 +9,13 @@ $brown: #A17B6C;
 $lightBlue: #B1C2CC;
 $tan: #EAE5D5;
 $offWhite: #FDFBF5;
+$line: 1px solid rgba(253,251,245,.3);
 
 
 .main {
   margin-top: 0px;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   background-color: $mainColor;
   height: 100vh;
 
@@ -24,37 +25,52 @@ $offWhite: #FDFBF5;
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  border-top: 1px solid white;
 }
 .line {
   width: 90%;
-  height: 2px;
+  height: 2vh;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 0px;
-  border-top: 1.5px solid white;
+  border-top: $line;
 }
 
 .navLinks {
   display: flex;
   list-style: none;
-  color: $offWhite;
   padding-left: 45%;
+
 }
+
+
 
 .navLinks li {
   padding-left: 7rem;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
+
 }
+
+.navText {
+  color: $offWhite;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.navText:hover {
+  color: $lightBlue;
+}
+
+
 
 .hi {
   color: $offWhite;
   margin-left: 8%;
-  margin-top: 200px;
+  margin-top: 20%;
   position: absolute;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
+  font-weight: 400;
   font-size: 60px;
 }
 
@@ -62,7 +78,7 @@ $offWhite: #FDFBF5;
   color: $offWhite;
   position: absolute;
   margin-left: 8%;
-  margin-top: 330px;
+  margin-top: 26%;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 24px;
@@ -71,18 +87,20 @@ $offWhite: #FDFBF5;
 .ilustration {
   width: 100%;
   height: 100vh;
-  border: 2px solid red;
 }
 
 
 .drawing {
-  height: 100vh;
-  max-width: 100vw;
-  background-color: $mainColor;
-  overflow: hidden;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: 100%;
+  height: 90vh;
+  margin-left: 40%;
+  margin-top: 24vh;
+  padding: 0 0;
+}
 
+.drawing img {
+  width: 100%;
 }
 
 .skills {
@@ -156,7 +174,7 @@ $offWhite: #FDFBF5;
 .icon {
   width: 100%;
   height: 100%;
-  border: 2px solid $offWhite;
+  border: $line;
 }
 
 .projects {
@@ -222,18 +240,32 @@ $offWhite: #FDFBF5;
   max-width: 100%;
 }
 
+// .imageNums {
+//   margin-top: 5vh;
+//   display: flex;
+//   list-style: none;
+//   margin-right: 10%;
+//   margin-left: 10%;
+//   justify-content: space-between;
+// }
 .imageNums {
-  margin-top: 5vh;
+  margin-top: 4vh;
+  width: 84%;
+  // display: grid;
+  // grid-template-columns: 25% 25% 25% 25%;
   display: flex;
-  list-style: none;
-  margin-right: 10%;
-  margin-left: 10%;
   justify-content: space-between;
+  align-content: left;
+  list-style: none;
+  margin-left: 10%;
+
+
+
 }
 
 .num {
-  width: 20%;
-  border-bottom: 1px solid $mainColor;
+  width: 50%;
+  // border-bottom: 1px solid $mainColor;
   padding-bottom: 1vh;
   text-align: right;
   cursor: pointer;
@@ -241,6 +273,21 @@ $offWhite: #FDFBF5;
   font-size: 16px;
   font-style: thin;
   color: $mainColor;
+  margin-right: 5%;
+
+}
+
+.slider {
+  width: 100%;
+  border-bottom: 1px solid rgba(44, 53, 60, .5);
+  height: 1vh;
+  transition: .2s;
+
+}
+
+.num:hover .slider{
+  margin-left: 40%;
+  width: 60%;
 }
 
 
@@ -296,7 +343,7 @@ $offWhite: #FDFBF5;
   width: 50%;
   margin-left: 15%;
   margin-top: 5vh;
-  border: 1.5px solid white;
+  border: $line;
 }
 .favBox {
   padding-top: 5%;
@@ -351,6 +398,7 @@ $offWhite: #FDFBF5;
   background-color: $mainContrast;
   display: grid;
   grid-template-columns: 100%;
+  transition: opacity .5s ease-in-out;
 }
 .contactForm {
   margin-top: 25%;
@@ -361,11 +409,29 @@ $offWhite: #FDFBF5;
 
 
 
-.contactForm input {
+
+
+.message {
+  width: 100%;
+  height: 25vh;
+  background-color: $mainContrast;
+  border: $line;
+  margin-bottom: 3vh;
+  padding-left: 5%;
+  padding-bottom: 22%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  color: $offWhite;
+  outline: none;
+
+}
+
+
+.small {
   width: 100%;
   height: 10vh;
   background-color: $mainContrast;
-  border: 1px solid $offWhite;
+  border: $line;
   margin-bottom: 3vh;
   padding-left: 5%;
   font-family: 'Rubik', sans-serif;
@@ -373,6 +439,8 @@ $offWhite: #FDFBF5;
   color: $offWhite;
   outline: none;
 }
+
+
 input[type=submit] {
   width: 20%;
   height: 5vh;
@@ -380,7 +448,14 @@ input[type=submit] {
   text-align: center;
   color: $offWhite;
   cursor: pointer;
+  background-color: $mainContrast;
+  border: $line;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  outline: none;
 }
+
+
 
 ::placeholder {
   font-family: 'Rubik', sans-serif;
@@ -393,6 +468,15 @@ input[type=submit] {
 .workTogether {
   width: 100%;
   height: 100%;
+}
+
+.thanks {
+  color: $offWhite;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 40%;
+  transition: opacity .5s ease-in-out;
 }
 
 
