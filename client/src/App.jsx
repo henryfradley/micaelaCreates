@@ -32,6 +32,7 @@ class App extends React.Component {
     this.handleChange =  this.handleChange.bind(this);
     this.handleSubmit =  this.handleSubmit.bind(this);
     this.scroll = this.scroll.bind(this);
+
   }
 
 
@@ -55,23 +56,17 @@ class App extends React.Component {
         message: this.state.message,
       }
     })
-    .then(res => {
-      if (res.data.status === 'success') {
-        this.setState({
-          showForm: false
-        })
-      } else {
-        alert("Sorry your message failed to send")
-      }
+    this.setState({
+      showForm: false
     })
+    // .then(res => {
+    //   if (res.data.status === 'success') {
+    //   } else {
+    //     alert("Sorry your message failed to send")
+    //   }
+    // })
   }
 
-  // resetForm() {
-  //   this.setState({
-  //     name: '',
-  //     email: '',
-  //     message: ''
-  //   })
 
 
   scroll(event) {
@@ -82,11 +77,14 @@ class App extends React.Component {
   }
 
 
+
+
+
   render() {
     return (
       <div>
         <Main scroll={this.scroll} />
-        <Skills />
+        <Skills showElement={this.showElement} />
         <Projects data={this.state.data} />
         <About />
         <Tools />

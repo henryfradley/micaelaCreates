@@ -5,7 +5,7 @@ import Carousel from './Carousel.jsx';
 const Projects = function(props) {
 
   return (
-    <div className={styles.projects}>
+    <div className={styles.projects} id="projects">
       <h1>FEATURED PROJECTS</h1>
       <Carousel project={props.data.aloha} />
     </div>

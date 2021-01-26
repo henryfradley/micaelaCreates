@@ -72,8 +72,24 @@ $line: 1px solid rgba(253,251,245,.3);
   font-style: italic;
   font-weight: 400;
   font-size: 60px;
+  opacity: 0;
+  animation-name: slideHead;
+  animation-duration: .5s;
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+
+
+
+}
+@keyframes slideHead {
+  from {margin-top: 25%; opacity: 0;}
+  to {margin-top: 20%; opacity: 1;}
 }
 
+@keyframes slideInfo {
+  from {margin-top: 31%; opacity: 0}
+  to {margin-top: 26%; opacity: 1}
+}
 .info {
   color: $offWhite;
   position: absolute;
@@ -82,6 +98,11 @@ $line: 1px solid rgba(253,251,245,.3);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 24px;
+  opacity: 0;
+  animation-name: slideInfo;
+  animation-duration: .5s;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
 }
 
 .ilustration {
@@ -95,7 +116,7 @@ $line: 1px solid rgba(253,251,245,.3);
   grid-template-columns: 100%;
   height: 90vh;
   margin-left: 40%;
-  margin-top: 24vh;
+  margin-top: 21.5vh;
   padding: 0 0;
 }
 
@@ -122,14 +143,18 @@ $line: 1px solid rgba(253,251,245,.3);
   padding-top: 100px;
   background-color: $mainContrast;
   width: 100%;
-
 }
+@keyframes slideImages {
+  0% {margin-top: 50%; opacity: 0;}
+  100% {margin-top: 10%; opacity: 1;}
+}
+
 .skillGrid {
-  width: 74%;
-  margin-left: 13%;
-  margin-right: 13%;
-  margin-top: 10%;
-  height: 60%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  height: 60vh;
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: .5em;
@@ -142,6 +167,17 @@ $line: 1px solid rgba(253,251,245,.3);
   width: 100%;
   height: 100%;
   background-color: white;
+
+
+}
+
+.slideAppear {
+  opacity: 0;
+  animation-name: slideImages;
+  animation-duration: 3.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+
 }
 
 .goodAt {
@@ -158,6 +194,7 @@ $line: 1px solid rgba(253,251,245,.3);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 40px;
+  font-weight: 400;
 
 }
 
@@ -181,7 +218,7 @@ $line: 1px solid rgba(253,251,245,.3);
   width: 100%;
   text-align:center;
   background-color: $offWhite;
-  padding-bottom: 50px;
+  padding-bottom: 15vh;
 }
 
 .projects h1 {
@@ -190,6 +227,7 @@ $line: 1px solid rgba(253,251,245,.3);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-size: 50px;
+  font-weight: 400;
   color: $secondaryColor;
 }
 
@@ -229,35 +267,29 @@ $line: 1px solid rgba(253,251,245,.3);
 
 
 .image {
-  width: 80%;
-  height: 80%;
-  margin-right: 10%;
-  margin-left: 10%;
+  width: 100%;
+
 }
+
+
 
 .image img {
   height: auto;
   max-width: 100%;
 }
 
-// .imageNums {
-//   margin-top: 5vh;
-//   display: flex;
-//   list-style: none;
-//   margin-right: 10%;
-//   margin-left: 10%;
-//   justify-content: space-between;
-// }
+
 .imageNums {
-  margin-top: 4vh;
-  width: 84%;
+  margin-top: 3vh;
+  width: 109%;
   // display: grid;
   // grid-template-columns: 25% 25% 25% 25%;
   display: flex;
   justify-content: space-between;
   align-content: left;
   list-style: none;
-  margin-left: 10%;
+
+
 
 
 
@@ -273,7 +305,8 @@ $line: 1px solid rgba(253,251,245,.3);
   font-size: 16px;
   font-style: thin;
   color: $mainColor;
-  margin-right: 5%;
+  margin-right: 8%;
+
 
 }
 
@@ -324,6 +357,7 @@ $line: 1px solid rgba(253,251,245,.3);
 .aboutDetails h1 {
   font-family: 'Old Standard TT', serif;
   font-style: italic;
+  font-weight: 400;
   font-size: 60px;
   color: $offWhite;
   margin-top: 20%;
@@ -333,6 +367,7 @@ $line: 1px solid rgba(253,251,245,.3);
 .aboutDetails p {
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
+  font-weight: 300;
   color: $offWhite;
   margin-top: 5%;
   margin-left: 15%;
@@ -452,6 +487,7 @@ input[type=submit] {
   background-color: $mainContrast;
   border: $line;
   font-family: 'Rubik', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   outline: none;
 }
@@ -461,6 +497,7 @@ input[type=submit] {
 ::placeholder {
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
+  font-weight: 300;
   color: $offWhite;
 }
 
@@ -469,6 +506,26 @@ input[type=submit] {
 .workTogether {
   width: 100%;
   height: 100%;
+}
+
+.workTogether h1 {
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: 45px;
+  font-weight: 400;
+  width: 70%;
+  margin-left: 13%;
+  margin-top: 30%;
+
+}
+
+.workTogether h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 13%;
+  margin-top: 5%;
+
 }
 
 .thanks {

@@ -19,10 +19,9 @@ const Carousel = function(props) {
         {props.project.secondaryText}
         </div>
       </div>
-      <div className={styles.images}>
+      <div>
         <div className={styles.image}>
-          <img src={link + images[index]}/>
-          {console.log('index', index)}
+          <img src={link + images[index]} className={styles.imageLoad} />
         </div>
           <li className={styles.imageNums}>
             <ul onClick={() =>

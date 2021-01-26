@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../src/styles.module.scss';
-import illustration from '../src/illustration.png';
+import illustration from '../src/illustration.png'
+
 
 
 const Main = function(props) {
@@ -9,11 +10,12 @@ const Main = function(props) {
 
   return (
 
+
     <div className={styles.main} id="main">
       <nav className={styles.nav}>
         <ul className={styles.navLinks}>
           <li><span onClick={props.scroll} name="main" className={styles.navText}>HOME</span></li>
-          <li><span onClick={props.scroll} name="skills" className={styles.navText}>WORK</span></li>
+          <li><span onClick={props.scroll} name="projects" className={styles.navText}>WORK</span></li>
           <li><span onClick={props.scroll} name="about" className={styles.navText}>ABOUT</span></li>
           <li><span onClick={props.scroll} name="contact" className={styles.navText}>CONTACT</span></li>
         </ul>
@@ -33,3 +35,6 @@ const Main = function(props) {
 
 
 export default Main;
+
+
+
