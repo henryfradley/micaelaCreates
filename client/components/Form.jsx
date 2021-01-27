@@ -2,6 +2,8 @@ import React from 'react';
 import styles from '../src/styles.module.scss';
 import { BsEnvelope } from "react-icons/bs"
 import Fade from 'react-reveal/Fade';
+import airplane from '../src/icons/Airplane.png';
+
 
 
 const Form = (props) => {
@@ -15,7 +17,17 @@ const Form = (props) => {
           </input>
           <input required onChange={props.handleChange} className={styles.message} type="text" name="message" placeholder="Let’s chat! What can I do for you?"></input>
           <input className={styles.submit} type="submit" value="SEND"></input>
-        </form> : <BsEnvelope size="50vh"/>}
+        </form> :
+          <div className={styles.popup}>
+            <Fade distance="3vh" delay={500} bottom>
+              <img alt="plane" src={airplane}></img>
+            </Fade>
+            <h1>THANKS A BUNCH!</h1>
+            <h3>talk to you soon!</h3>
+          </div>
+          }
+
+
 
 
       </div>

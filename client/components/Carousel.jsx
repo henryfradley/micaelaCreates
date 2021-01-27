@@ -8,6 +8,11 @@ const Carousel = function(props) {
   const link = 'https://micaelaswebsite.s3-us-west-2.amazonaws.com/';
 
   const images = props.project.images;
+  const types = props.project.types;
+
+  const typeList = types.map(type => {
+    return <div key={types.indexOf(type)} className={styles.type}><h5>{type}</h5></div>
+  })
 
 
   return (
@@ -24,11 +29,16 @@ const Carousel = function(props) {
           {props.project.secondaryText}
           </div>
         </Fade>
+        <div className={styles.projectTypes}>
+        <Fade distance="5vh" delay={600} bottom>
+         {typeList}
+        </Fade>
+        </div>
       </div>
       <div>
         <Fade distance="5vh" delay={500} bottom>
           <div className={styles.image}>
-            <img src={link + images[index]} className={styles.imageLoad} />
+            <img src={`${link}${images[index]}`} className={styles.imageLoad} />
           </div>
         </Fade>
           <li className={styles.imageNums}>
@@ -50,6 +60,7 @@ const Carousel = function(props) {
               setIndex(3)} className={styles.num}>04<div className={styles.slider}></div></ul>
           </Fade>
           </li>
+
       </div>
     </div>
 

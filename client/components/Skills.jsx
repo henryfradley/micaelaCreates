@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import styles from '../src/styles.module.scss';
 // import Reveal from 'react-reveal'
 import Fade from 'react-reveal/Fade';
-import Icon1 from '../src/icon1.png';
-import Icon2 from '../src/icon2.png';
-import Icon3 from '../src/icon3.png';
-import Icon4 from '../src/icon4.png';
+import Icon1 from '../src/icons/1.png';
+import Icon2 from '../src/icons/2.png';
+import Icon3 from '../src/icons/3.png';
+import Icon4 from '../src/icons/4.png';
 
 
 

@@ -8,10 +8,10 @@ import Projects from '../components/Projects.jsx';
 import About from '../components/About.jsx';
 import Tools from '../components/Tools.jsx';
 import Form from '../components/Form.jsx';
-import Thanks from '../components/Thanks.jsx';
 import Foot from '../components/Foot.jsx';
-
 import Logo from './illustration.png';
+
+
 
 
 class App extends React.Component {
@@ -22,14 +22,42 @@ class App extends React.Component {
         email: '',
         message: '',
         showForm: true,
-      data: {
-        aloha: {
-          name: 'ALOHA GARDENER',
+        data: [{
+            name: 'ALOHA GARDENER',
+            mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            images: ['AG1.jpg', 'AG2.jpg', 'AG3.jpg', 'AG4.jpg'],
+            types: ['ILLUSTRATION', 'BRANDING']
+        },
+        {
+          name: 'GOOSEBUMPS REIMAGINED',
           mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          images: ['_DSC2802-2.jpg', '_DSC2909-2.jpg', '_DSC3034-2.jpg', '_DSC3085.jpg']
-        }
-      }
+          images: ['Goosebumps1.jpg', 'Goosebumps2.jpg', 'Goosebumps3.jpg', 'Goosebumps4.jpg'],
+          types: ['ILLUSTRATION', 'BRANDING']
+      },
+      {
+        name: 'OUTRIGGER DUKE FOUNDATION',
+        mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        images: ['ODKF1.jpg', 'ODKF2.jpg', 'ODKF3.jpg', 'ODKF4.jpg'],
+        types: ['ILLUSTRATION', 'BRANDING']
+    },
+    {
+      name: 'PINK AND NAVY',
+      mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      images: ['PN1.jpg', 'PN2.jpg', 'PN3.jpg', 'PN4.jpg'],
+      types: ['ILLUSTRATION', 'BRANDING']
+  },
+  {
+    name: 'SUSTAINABLE ILLUSTRATIONS',
+    mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    images: ['SI-extra.jpg', 'SI2.jpg', 'SI3.jpg', 'SI4.jpg'],
+    types: ['ILLUSTRATION', 'BRANDING']
+}
+      ]
     }
     this.handleChange =  this.handleChange.bind(this);
     this.handleSubmit =  this.handleSubmit.bind(this);
@@ -74,7 +102,13 @@ class App extends React.Component {
   scroll(event) {
     let name = event.target.getAttribute('name');
     const page = document.querySelector(`#${name}`)
-    page.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    console.log('name', name)
+    if (name === 'projects') {
+      page.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      page.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+
 
   }
 
