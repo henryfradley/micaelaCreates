@@ -5,7 +5,6 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const credentials = require('../dev_config.js');
-console.log(credentials);
 const port = 3000;
 
 let transporter = nodemailer.createTransport({

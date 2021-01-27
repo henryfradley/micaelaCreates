@@ -102,7 +102,6 @@ class App extends React.Component {
   scroll(event) {
     let name = event.target.getAttribute('name');
     const page = document.querySelector(`#${name}`)
-    console.log('name', name)
     if (name === 'projects') {
       page.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {

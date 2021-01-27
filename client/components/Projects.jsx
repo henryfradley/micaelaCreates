@@ -8,7 +8,6 @@ const Projects = function(props) {
   let data = props.data;
 
 
-  console.log('data', data);
   const carousels = data.map(project =>
     <Carousel key={data.indexOf(project)} project={project} />
     )

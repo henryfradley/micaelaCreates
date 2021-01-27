@@ -27,16 +27,24 @@ const Skills = function(props) {
 
             <div className={styles.skillGrid}>
               <Fade distance="5vh" delay={500} bottom>
-                <div className={styles.photoGrid}></div>
+                <div className={styles.photoGrid}>
+                  <img alt="positivity" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/thumbsup.jpg"></img>
+                </div>
               </Fade>
               <Fade distance="5vh" delay={600} bottom>
-                <div className={styles.photoGrid}></div>
+                <div className={styles.photoGrid}>
+                <img alt="coffee" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/coffeecup.jpg"></img>
+                </div>
               </Fade>
               <Fade distance="5vh" delay={700} bottom>
-                <div className={styles.photoGrid}></div>
+                <div className={styles.photoGrid}>
+                <img alt="wacom" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/wacom.jpg"></img>
+                </div>
               </Fade>
               <Fade distance="5vh" delay={800} bottom>
-                <div className={styles.photoGrid}></div>
+                <div className={styles.photoGrid}>
+                <img alt="desk" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/desk.jpg"></img>
+                </div>
               </Fade>
             </div>
 

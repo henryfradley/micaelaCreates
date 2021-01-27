@@ -32,6 +32,9 @@ const Form = (props) => {
 
       </div>
       <div className={styles.workTogether}>
+
+        <img alt="backgroundimage" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/000010.jpg"></img>
+        <div className={styles.fade}></div>
         <Fade distance="5vh" delay={500} bottom>
           <h1>WANT TO WORK TOGETHER? BECAUSE I DO!</h1>
         </Fade>
