@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../src/styles.module.scss';
 import { BsEnvelope } from "react-icons/bs"
-
+import Fade from 'react-reveal/Fade';
 
 
 const Form = (props) => {
@@ -20,8 +20,12 @@ const Form = (props) => {
 
       </div>
       <div className={styles.workTogether}>
-        <h1>WANT TO WORK TOGETHER? BECAUSE I DO!</h1>
-        <h4>hello@micaelarobinson.com</h4>
+        <Fade distance="5vh" delay={500} bottom>
+          <h1>WANT TO WORK TOGETHER? BECAUSE I DO!</h1>
+        </Fade>
+        <Fade distance="5vh" delay={550} bottom>
+          <h4>hello@micaelarobinson.com</h4>
+        </Fade>
 
       </div>
 

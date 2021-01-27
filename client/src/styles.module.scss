@@ -14,10 +14,11 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .main {
   margin-top: 0px;
-  padding: 0;
-  width: 100vw;
+  padding: 0 0;
   background-color: $mainColor;
   height: 100vh;
+
+
 
 }
 .nav {
@@ -113,15 +114,22 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .drawing {
   display: grid;
-  grid-template-columns: 100%;
-  height: 90vh;
-  margin-left: 40%;
-  margin-top: 21.5vh;
-  padding: 0 0;
+  grid-template-columns: 65%;
+  height: 75vh;
+  margin-top: 16vh;
+  margin-bottom: 0%;
+  margin-left: 35%;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .drawing img {
-  width: 100%;
+  height: 90%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
 }
 
 .skills {
@@ -181,7 +189,7 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .goodAt {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 60%;
   width: 74%;
   margin-left: 13%;
@@ -195,12 +203,13 @@ $line: 1px solid rgba(253,251,245,.3);
   font-style: italic;
   font-size: 40px;
   font-weight: 400;
+  margin-bottom: 7%;
 
 }
 
 .iconGrid {
   margin-top: 2%;
-  width: 90%;
+  width: 80%;
   margin-right: 10%;
   height: 100%;
   display: grid;
@@ -210,8 +219,36 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .icon {
   width: 100%;
-  height: 100%;
+  height: 12vh;
   border: $line;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.icon img {
+  height: 60%;
+}
+
+.icon p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  letter-spacing: .1em;
+  font-weight: 300;
+  color: $offWhite;
+}
+
+.iconLeft {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.iconRight {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .projects {
@@ -226,7 +263,7 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-bottom: 20vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 50px;
+  font-size: 3.2em;
   font-weight: 400;
   color: $secondaryColor;
 }
@@ -248,13 +285,14 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-bottom: 4vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.4em;
   color: $secondaryColor;
 }
 
 .project div {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 1.2em;
+  font-weight: 300;
   color: $mainColor;
 
 }
@@ -303,9 +341,12 @@ $line: 1px solid rgba(253,251,245,.3);
   cursor: pointer;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  font-style: thin;
+  font-weight: 300;
   color: $mainColor;
   margin-right: 8%;
+  letter-spacing: .1vw;
+
+
 
 
 }
@@ -335,13 +376,14 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .profileImage {
-  width: 100%;
-  height: 100vh;
+
+  height: 100%;
   overflow: hidden;
   margin-bottom: 0;
 }
 
 .profileImage img {
+  height: 100%;
   width: 100%;
   margin-bottom: 0;
   overflow: hidden;
@@ -358,7 +400,7 @@ $line: 1px solid rgba(253,251,245,.3);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 3.2em;
   color: $offWhite;
   margin-top: 20%;
   margin-left: 15%;
@@ -366,32 +408,39 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .aboutDetails p {
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: 300;
   color: $offWhite;
   margin-top: 5%;
   margin-left: 15%;
-  width: 45%;
+  width: 50%;
 }
 
 .favorites {
   width: 50%;
+  padding: 2% 2%;
   margin-left: 15%;
   margin-top: 5vh;
   border: $line;
+
 }
 .favBox {
-  padding-top: 5%;
-  padding-bottom: 3%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
 
 }
 .favorites p {
+  text-align: left;
   width: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  margin-left: 7%;
-  margin-top: 0;
-  margin-bottom: 2%;
+  font-weight: 300;
+  letter-spacing: .1vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  color: $lightBlue;
+
 }
 
 .tools {
@@ -406,7 +455,8 @@ $line: 1px solid rgba(253,251,245,.3);
   color: $mainColor;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 3.5em;
   text-align: center;
   display: flex;
   align-items: center;
@@ -522,7 +572,7 @@ input[type=submit] {
 .workTogether h4 {
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   margin-left: 13%;
   margin-top: 5%;
 

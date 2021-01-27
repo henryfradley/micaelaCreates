@@ -11,6 +11,8 @@ import Form from '../components/Form.jsx';
 import Thanks from '../components/Thanks.jsx';
 import Foot from '../components/Foot.jsx';
 
+import Logo from './illustration.png';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -83,7 +85,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Main scroll={this.scroll} />
+        <Main scroll={this.scroll} logo={Logo}/>
         <Skills showElement={this.showElement} />
         <Projects data={this.state.data} />
         <About />

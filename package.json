@@ -1,10 +1,12 @@
 {
   "name": "micaelacreates",
-  "homepage": "http://micaelarobinson.com",
+  "homepage": "https://henryfradley.github.io/micaelaCreates",
   "version": "1.0.0",
   "description": "Portfolio for Micaela Robinson-Duran",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d client/public",
     "build": "webpack --config webpack.config.js",
     "build-production": "webpack --config webpack.production.config.js",
     "watch": "webpack --watch",

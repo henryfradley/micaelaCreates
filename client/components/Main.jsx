@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../src/styles.module.scss';
-import illustration from '../src/illustration.png'
+// import illustration from '../src/illustration.png'
 
 
 
@@ -24,8 +24,7 @@ const Main = function(props) {
       <h1 className={styles.hi}>HI. I'M MICAELA,</h1>
       <h3 className={styles.info}>A GRAPHIC DESIGNER BASED IN HONOLULU, HI.</h3>
       <div className={styles.drawing}>
-      <img src={illustration} alt="illustration" />
-
+      <img src={props.logo} alt="illustration" />
       </div>
 
 
