@@ -9,7 +9,7 @@ const About = () => {
     <div className={styles.aboutMe} id="about">
       <div className={styles.aboutGrid}>
         <div className={styles.profileImage}>
-          <img alt="profile" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/headshot.jpg"></img>
+          <img alt="profile" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/_DSC6406.jpg"></img>
 
         </div>
         <div className={styles.aboutDetails}>
@@ -17,11 +17,15 @@ const About = () => {
           <h1>ABOUT ME</h1>
         </Fade>
         <Fade distance="5vh" delay={550} bottom>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p>Hi, thanks for stopping by! My name is Micaela and I’m a graphic designer from Mill Valley, CA. Having grown up near a big metropolitan city, I was constantly surrounded by art from a variety of cultures. My love for art inspired my profession as a graphic designer. I graduated from UH Manoa with a BFA in Graphic Design in the spring of 2019.
           </p>
         </Fade>
         <Fade distance="5vh" delay={600} bottom>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <p>Since then, I have been on the move expanding my portfolio, acquiring freelance projects, and working for the digital media agency, Ellemsee Media, in Downtown Honolulu.
+          </p>
+        </Fade>
+        <Fade distance="5vh" delay={650} bottom>
+          <p>Have a project in mind you want to discuss? Let’s do it! Send me a message below to get started.
           </p>
         </Fade>
 

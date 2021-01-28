@@ -5,17 +5,11 @@ import Fade from 'react-reveal/Fade';
 
 const Projects = function(props) {
 
-  let data = props.data;
-
+  let data = props.data.projectData;
 
   const carousels = data.map(project =>
     <Carousel key={data.indexOf(project)} project={project} />
     )
-
-
-
-
-
 
   return (
     <div className={styles.projects} id="projects">
@@ -23,7 +17,6 @@ const Projects = function(props) {
         <h1>FEATURED PROJECTS</h1>
       </Fade>
       {data ? carousels : null}
-
     </div>
   )
 }

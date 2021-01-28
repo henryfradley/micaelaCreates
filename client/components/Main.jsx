@@ -23,9 +23,9 @@ const Main = function(props) {
       <div className={styles.line}></div>
       <h1 className={styles.hi}>HI. I'M MICAELA,</h1>
       <h3 className={styles.info}>A GRAPHIC DESIGNER BASED IN HONOLULU, HI.</h3>
-      <div className={styles.drawing}>
+      <div className={styles.getInTouch} name="contact" onClick={props.scroll} type="submit"><p  name="contact">GET IN TOUCH</p></div>
       <img src={props.logo} alt="illustration" />
-      </div>
+
 
 
     </div>

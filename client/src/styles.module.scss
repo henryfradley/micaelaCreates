@@ -11,17 +11,21 @@ $tan: #EAE5D5;
 $offWhite: #FDFBF5;
 $line: 1px solid rgba(253,251,245,.3);
 
-
-.main {
-  margin-top: 0px;
-  padding: 0 0;
-  background-color: $mainColor;
-  height: 100vh;
-  overflow: hidden;
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 
 
+  .main {
+    margin-top: 0px;
+    padding: 0 0;
+    background-color: $mainColor;
+    height: 100vh;
+    overflow: hidden;
+    }
 
-}
+
 .nav {
   display: flex;
   align-items: center;
@@ -80,17 +84,37 @@ $line: 1px solid rgba(253,251,245,.3);
   animation-delay: 250ms;
   animation-fill-mode: forwards;
 
-
-
 }
+
+
+
 @keyframes slideHead {
   from {margin-top: 25%; opacity: 0;}
   to {margin-top: 20%; opacity: 1;}
+}
+@keyframes slideHeadMobile {
+  from {margin-top: 10%; opacity: 0;}
+  to {margin-top: 2%; opacity: 1;}
 }
 
 @keyframes slideInfo {
   from {margin-top: 31%; opacity: 0}
   to {margin-top: 26%; opacity: 1}
+}
+@keyframes slideInfoMobile {
+  from {margin-top: 20%; opacity: 0}
+  to {margin-top: 15%; opacity: 1}
+}
+
+
+@keyframes slideButton {
+  from {margin-top: 35%; opacity: 0}
+  to {margin-top: 30%; opacity: 1}
+}
+
+@keyframes slideButtonMobile {
+  from {margin-top: 40%; opacity: 0}
+  to {margin-top: 30%; opacity: 1}
 }
 .info {
   color: $offWhite;
@@ -99,7 +123,7 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-top: 26%;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.2rem;
   opacity: 0;
   animation-name: slideInfo;
   animation-duration: .5s;
@@ -107,26 +131,47 @@ $line: 1px solid rgba(253,251,245,.3);
   animation-fill-mode: forwards;
 }
 
-
-
-
-.drawing {
-  // display: grid;
-  // grid-template-columns: 65%;
-  width: 60%;
-  height: 70%;
-  margin-bottom: 0;
-  margin-top: 12%;
-  margin-left: 40%;
-  position: relative;
-
+.getInTouch {
+  width: 10%;
+  height: 5vh;
+  color: $offWhite;
+  cursor: pointer;
+  border: $line;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin-left: 8%;
+  margin-top: 30%;
+  animation-name: slideButton;
+  animation-duration: .5s;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.drawing img {
-  max-width: 100%;
-  min-width: 65%;
+
+
+// .drawing {
+//   // display: grid;
+//   // grid-template-columns: 65%;
+//   width: 60%;
+//   height: 70%;
+//   margin-bottom: 0;
+//   margin-top: 12%;
+//   margin-left: 40%;
+//   position: relative;
+
+// }
+
+.main img {
+  max-width: 60%;
+  min-width: 55%;
   position: absolute;
   bottom: 0;
+  right: 0;
 
 }
 
@@ -141,8 +186,6 @@ $line: 1px solid rgba(253,251,245,.3);
   padding-top: 80px;
   background-color: $mainColor;
   width: 100%;
-
-
 }
 
 .left {
@@ -156,11 +199,11 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .skillGrid {
-  width: 60vh;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 30vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   margin-top: 5%;
-  height: 60vh;
+  height: 30vw;
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: .5em;
@@ -201,7 +244,7 @@ $line: 1px solid rgba(253,251,245,.3);
   color: $offWhite;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 40px;
+  font-size: 3em;
   font-weight: 400;
   margin-bottom: 7%;
 
@@ -231,7 +274,7 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .icon p {
   font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   letter-spacing: .1em;
   font-weight: 300;
   color: $offWhite;
@@ -286,7 +329,7 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-bottom: 4vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 1.4em;
+  font-size: 1.1em;
   color: $secondaryColor;
 }
 
@@ -298,8 +341,7 @@ $line: 1px solid rgba(253,251,245,.3);
 
 }
 .projectInfo {
-  width: 65%;
-  margin-right: 25%;
+  width: 70%;
   margin-top: 3vh;
 }
 
@@ -316,6 +358,8 @@ $line: 1px solid rgba(253,251,245,.3);
   height: auto;
   max-width: 100%;
 }
+
+
 
 
 .imageNums {
@@ -407,7 +451,7 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .profileImage img {
-  width: 105%;
+  width: 100%;
   margin-bottom: 0;
   overflow: hidden;
 
@@ -429,14 +473,16 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-left: 15%;
 }
 
+
+
 .aboutDetails p {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
   color: $offWhite;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-left: 15%;
-  width: 50%;
+  width: 60%;
 }
 
 .favorites {
@@ -721,6 +767,22 @@ input[type=submit] {
 
 }
 
+.social {
+  margin-top: 3%;
+  margin-left: 13%;
+  width: 20%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social a {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+
+}
+
 .thanks {
   color: $offWhite;
   width: 50%;
@@ -761,9 +823,312 @@ input[type=submit] {
   color: $offWhite;
   margin-top: 25%;
 
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 70vh;
+  }
+  .nav {
+    min-height: 30px;
+    justify-content: center;
+  }
+  .navLinks {
+    padding-left: 0%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navLinks li {
+    padding-left: 0;
+  }
+  .hi {
+    font-size: 2rem;
+    animation-name: slideHeadMobile;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .info {
+    font-size: .9rem;
+    animation-name: slideInfoMobile;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .getInTouch {
+    font-size: .6em;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%;
+    animation-name: slideButtonMobile;
+  }
+  .main img {
+    min-width: 100%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 9%;
+  }
+  .skills {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .left {
+    padding-top: 0px;
+    height: 100vw;
+  }
+  .skillGrid {
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    row-gap: 0em;
+    column-gap: 0em;
+  }
+
+  .right {
+    padding-top: 25px;
+  }
+
+
+  .goodAt {
+    margin-top: 1px;
+    height: 60vh;
+  }
+  .goodAt h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .iconGrid {
+    margin-top: 0%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    row-gap: .1em;
+    height: 45vh;
+
+  }
+
+  .icon {
+    height: 10vh;
+  }
+
+  .iconLeft {
+    height: 10vh;
+  }
+
+  .icon p {
+    font-size: .8rem;
+  }
+
+  .projects {
+    margin-top: 10vh;
+  }
+  .projects h1 {
+    padding-top: 15vh;
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .projects h3 {
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 1.5vh;
+  }
+
+  .project div {
+    font-size: .6em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+  .carousel {
+    grid-template-columns: 100%;
+    margin-bottom: 8%;
+  }
+
+  .projectTypes {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 100%;
+  }
+
+  .profileImage {
+
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .aboutMe {
+    height: 40vh;
+
+  }
+
+  .aboutDetails {
+    height: 60vh;
+
+  }
+
+  .aboutDetails h1 {
+    margin-top: 3%;
+    font-size: 2rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+
+
+  }
+
+  .aboutDetails p {
+    font-size: .8rem;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .favorites {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .tools {
+    margin-top: 100vh;
+    height: 60vh;
+  }
+
+  .myTools {
+    font-size: 2rem;
+    height: 30%;
+  }
+
+  .tech {
+    height: 75%;
+  }
+
+  .techBox {
+    grid-template-columns: 100%;
+    height: 100%;
+
+  }
+
+  .adobe {
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 10vh;
+  }
+
+  .adobe img {
+    height: 80%;
+  }
+
+  .coffee {
+    height: 15vh;
+  }
+
+  .coffee img {
+    height: 80%;
+  }
+
+  .microsoft {
+    margin-top: 3%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .microsoft img {
+    margin-top: 0%;
+    height: 80%;
+    float: none;
+  }
+
+  .contact {
+    grid-template-columns: 100%;
+    height: 120vh;
+  }
+
+  .form {
+    height: 65vh;
+  }
+
+  .contactForm {
+    margin-top: 3%;
+  }
+  ::placeholder {
+    font-size: 1rem;
+  }
+
+  .workTogether {
+    height: 65vh;
+  }
+
+  .social {
+    width: 35%;
+  }
+
+  .workTogether h1 {
+    margin-top: 3%;
+  }
+  .footer {
+    height: 25vh;
+    grid-template-columns: 100%;
+  }
+
+  .footer h2 {
+    margin-top: 20%;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 0%;
+
+  }
+
+  .footNav ul {
+    margin-top: 0%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
+
 
 
 

@@ -4,15 +4,20 @@ import Fade from 'react-reveal/Fade';
 
 const Carousel = function(props) {
   const [index, setIndex] = useState(0);
-
-  const link = 'https://micaelaswebsite.s3-us-west-2.amazonaws.com/';
-
+  const link = 'https://d2k5lcv0ndozn2.cloudfront.net/';
   const images = props.project.images;
+
+  const imageList = images.map(image => {
+    return <img src={`${link}${image}`}></img>
+  })
+
+
   const types = props.project.types;
 
   const typeList = types.map(type => {
     return <div key={types.indexOf(type)} className={styles.type}><h5>{type}</h5></div>
   })
+
 
 
   return (
@@ -38,7 +43,7 @@ const Carousel = function(props) {
       <div>
         <Fade distance="5vh" delay={500} bottom>
           <div className={styles.image}>
-            <img src={`${link}${images[index]}`} className={styles.imageLoad} />
+            {imageList[index]}
           </div>
         </Fade>
           <li className={styles.imageNums}>

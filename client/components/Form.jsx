@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from '../src/styles.module.scss';
-import { BsEnvelope } from "react-icons/bs"
 import Fade from 'react-reveal/Fade';
 import airplane from '../src/icons/Airplane.png';
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FiDribbble } from "react-icons/fi";
+
+
 
 
 
@@ -41,6 +44,17 @@ const Form = (props) => {
         <Fade distance="5vh" delay={550} bottom>
           <h4>hello@micaelarobinson.com</h4>
         </Fade>
+        <div className={styles.social}>
+          <Fade distance="5vh" delay={700} bottom>
+            <a href="https://www.instagram.com/yarn.classification/"><FaInstagram size="35px" color="white" /></a>
+          </Fade>
+          <Fade distance="5vh" delay={800} bottom>
+          <a href="https://www.linkedin.com/in/micaela-robinson-duran-a6b92b1bb/"><FaLinkedin size="35px" color="white" /></a>
+          </Fade>
+          <Fade distance="5vh" delay={900} bottom>
+          <a href="https://dribbble.com/micaela6"><FiDribbble size="35px" color="white" /></a>
+          </Fade>
+        </div>
 
       </div>
 

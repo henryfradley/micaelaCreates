@@ -15,11 +15,6 @@ import Icon4 from '../src/icons/4.png';
 
 const Skills = function(props) {
 
-
-
-
-
-
   return (
 
     <div className={styles.skills} id="skills">
@@ -28,22 +23,22 @@ const Skills = function(props) {
             <div className={styles.skillGrid}>
               <Fade distance="5vh" delay={500} bottom>
                 <div className={styles.photoGrid}>
-                  <img alt="positivity" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/thumbsup.jpg"></img>
+                  <img alt="positivity" src="https://d2k5lcv0ndozn2.cloudfront.net/thumbsup.jpg"></img>
                 </div>
               </Fade>
               <Fade distance="5vh" delay={600} bottom>
                 <div className={styles.photoGrid}>
-                <img alt="coffee" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/coffeecup.jpg"></img>
+                <img alt="coffee" src="https://d2k5lcv0ndozn2.cloudfront.net/coffeecup.jpg"></img>
                 </div>
               </Fade>
               <Fade distance="5vh" delay={700} bottom>
                 <div className={styles.photoGrid}>
-                <img alt="wacom" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/wacom.jpg"></img>
+                <img alt="wacom" src="https://d2k5lcv0ndozn2.cloudfront.net/wacom.jpg"></img>
                 </div>
               </Fade>
               <Fade distance="5vh" delay={800} bottom>
                 <div className={styles.photoGrid}>
-                <img alt="desk" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/desk.jpg"></img>
+                <img alt="desk" src="https://d2k5lcv0ndozn2.cloudfront.net/desk.jpg"></img>
                 </div>
               </Fade>
             </div>

@@ -8,8 +8,6 @@ import microsoft from '../src/icons/Microsoft.png';
 
 const Tools = () => {
 
-
-
   return (
     <div className={styles.tools}>
 
