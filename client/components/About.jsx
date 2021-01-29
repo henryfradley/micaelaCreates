@@ -9,7 +9,7 @@ const About = () => {
     <div className={styles.aboutMe} id="about">
       <div className={styles.aboutGrid}>
         <div className={styles.profileImage}>
-          <img alt="profile" src="https://micaelaswebsite.s3-us-west-2.amazonaws.com/_DSC6406.jpg"></img>
+          <img alt="profile" src="https://d2k5lcv0ndozn2.cloudfront.net/_DSC6406.jpg"></img>
 
         </div>
         <div className={styles.aboutDetails}>

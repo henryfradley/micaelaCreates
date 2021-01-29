@@ -1,5 +1,5 @@
 const projectData = [{
-  name: 'ALOHA GARDENER',
+  name: 'ALOHA GARDNER',
   mainText: 'Aloha Gardner is a Kauai based tea brand that specializes in butterfly pea flower tea. When designing their branding, I aimed to capture the femininity and delicate nature of their product. I combined a neutral color palette with soft curved lines to speak to the essence of the brand.',
   secondaryText: 'I focused a great deal on the butterfly pea flower illustration. I wanted it to work well on its own too, so that it may be used as an identifying mark for the brand.',
   images: ['AG1.jpg', 'AG2.jpg', 'AG3.jpg', 'AG4.jpg'],

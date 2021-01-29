@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../src/styles.module.scss';
 import Fade from 'react-reveal/Fade';
+import {CSSTransition} from 'react-transition-group';
 
 const Carousel = function(props) {
   const [index, setIndex] = useState(0);
@@ -8,8 +9,11 @@ const Carousel = function(props) {
   const images = props.project.images;
 
   const imageList = images.map(image => {
-    return <img src={`${link}${image}`}></img>
+    return <img className={styles.carouselImage} src={`${link}${image}`}></img>
   })
+
+  let currentImage = imageList[index]
+  console.log('currentimage', currentImage)
 
 
   const types = props.project.types;
@@ -43,7 +47,7 @@ const Carousel = function(props) {
       <div>
         <Fade distance="5vh" delay={500} bottom>
           <div className={styles.image}>
-            {imageList[index]}
+          {currentImage}
           </div>
         </Fade>
           <li className={styles.imageNums}>
