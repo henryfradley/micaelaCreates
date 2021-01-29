@@ -13,7 +13,7 @@ const Carousel = function(props) {
   })
 
   let currentImage = imageList[index]
-  console.log('currentimage', currentImage)
+
 
 
   const types = props.project.types;

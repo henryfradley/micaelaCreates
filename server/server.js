@@ -21,7 +21,7 @@ transporter.verify(function(err, success) {
   if (err) {
     console.log(err);
   } else {
-    console.log('we good bah!');
+    console.log('messager ready');
   }
 });
 
