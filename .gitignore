@@ -4,3 +4,7 @@ node_modules
 #keys
 
 dev_config.js
+
+#pem
+
+micaelaCreates.pem
