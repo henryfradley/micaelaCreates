@@ -18,6 +18,7 @@ const Carousel = function(props) {
 
   const types = props.project.types;
 
+
   const typeList = types.map(type => {
     return <div key={types.indexOf(type)} className={styles.type}><h5>{type}</h5></div>
   })
