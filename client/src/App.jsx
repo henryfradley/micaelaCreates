@@ -8,8 +8,11 @@ import Projects from '../components/Projects.jsx';
 import About from '../components/About.jsx';
 import Tools from '../components/Tools.jsx';
 import Form from '../components/Form.jsx';
-import Thanks from '../components/Thanks.jsx';
 import Foot from '../components/Foot.jsx';
+import Logo from './illustration.png';
+import projectData from './projectData.js';
+
+
 
 
 class App extends React.Component {
@@ -20,14 +23,8 @@ class App extends React.Component {
         email: '',
         message: '',
         showForm: true,
-      data: {
-        aloha: {
-          name: 'ALOHA GARDENER',
-          mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          secondaryText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          images: ['_DSC2802-2.jpg', '_DSC2909-2.jpg', '_DSC3034-2.jpg', '_DSC3085.jpg']
-        }
-      }
+        data: projectData
+
     }
     this.handleChange =  this.handleChange.bind(this);
     this.handleSubmit =  this.handleSubmit.bind(this);
@@ -40,7 +37,6 @@ class App extends React.Component {
   handleChange(event) {
     event.preventDefault();
     let name = event.target.name;
-    // this.setState({[name]: event.target.value})
     this.setState({[name]: event.target.value})
   }
 
@@ -59,12 +55,7 @@ class App extends React.Component {
     this.setState({
       showForm: false
     })
-    // .then(res => {
-    //   if (res.data.status === 'success') {
-    //   } else {
-    //     alert("Sorry your message failed to send")
-    //   }
-    // })
+
   }
 
 
@@ -72,8 +63,11 @@ class App extends React.Component {
   scroll(event) {
     let name = event.target.getAttribute('name');
     const page = document.querySelector(`#${name}`)
-    page.scrollIntoView({ behavior: 'smooth', block: 'center' })
-
+    if (name === 'projects') {
+      page.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      page.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
   }
 
 
@@ -81,11 +75,12 @@ class App extends React.Component {
 
 
   render() {
+
     return (
       <div>
-        <Main scroll={this.scroll} />
+        <Main scroll={this.scroll} logo={Logo}/>
         <Skills showElement={this.showElement} />
-        <Projects data={this.state.data} />
+        <Projects data={projectData} />
         <About />
         <Tools />
         <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} showForm={this.state.showForm}/>

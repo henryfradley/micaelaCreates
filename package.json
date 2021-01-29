@@ -1,6 +1,6 @@
 {
   "name": "micaelacreates",
-  "homepage": "http://micaelarobinson.com",
+  "homepage": "https://henryfradley.github.io/micaelaCreates",
   "version": "1.0.0",
   "description": "Portfolio for Micaela Robinson-Duran",
   "main": "index.js",
@@ -14,13 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "classnames": "^2.2.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemailer": "^6.4.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

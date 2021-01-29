@@ -11,15 +11,21 @@ $tan: #EAE5D5;
 $offWhite: #FDFBF5;
 $line: 1px solid rgba(253,251,245,.3);
 
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 
-.main {
-  margin-top: 0px;
-  padding: 0;
-  width: 100vw;
-  background-color: $mainColor;
-  height: 100vh;
 
-}
+  .main {
+    margin-top: 0px;
+    padding: 0 0;
+    background-color: $mainColor;
+    height: 100vh;
+    overflow: hidden;
+    }
+
+
 .nav {
   display: flex;
   align-items: center;
@@ -78,18 +84,55 @@ $line: 1px solid rgba(253,251,245,.3);
   animation-delay: 250ms;
   animation-fill-mode: forwards;
 
-
-
 }
+
+
+
 @keyframes slideHead {
   from {margin-top: 25%; opacity: 0;}
   to {margin-top: 20%; opacity: 1;}
+}
+@keyframes slideHeadMobile {
+  from {margin-top: 10vh; opacity: 0;}
+  to {margin-top: 5vh; opacity: 1;}
+}
+
+@keyframes slideHeadIpad {
+  from {margin-top: 10vh; opacity: 0;}
+  to {margin-top: 6vh; opacity: 1;}
 }
 
 @keyframes slideInfo {
   from {margin-top: 31%; opacity: 0}
   to {margin-top: 26%; opacity: 1}
 }
+@keyframes slideInfoMobile {
+  from {margin-top: 20vh; opacity: 0}
+  to {margin-top: 15vh; opacity: 1}
+}
+
+@keyframes slideInfoIpad {
+  from {margin-top: 20vh; opacity: 0}
+  to {margin-top: 13vh; opacity: 1}
+}
+
+
+@keyframes slideButton {
+  from {margin-top: 35%; opacity: 0}
+  to {margin-top: 30%; opacity: 1}
+}
+
+@keyframes slideButtonMobile {
+  from {margin-top: 30vh; opacity: 0}
+  to {margin-top: 25vh; opacity: 1}
+}
+
+@keyframes slideButtonIpad {
+  from {margin-top: 25vh; opacity: 0}
+  to {margin-top: 20vh; opacity: 1}
+}
+
+
 .info {
   color: $offWhite;
   position: absolute;
@@ -97,7 +140,7 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-top: 26%;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.2rem;
   opacity: 0;
   animation-name: slideInfo;
   animation-duration: .5s;
@@ -105,23 +148,44 @@ $line: 1px solid rgba(253,251,245,.3);
   animation-fill-mode: forwards;
 }
 
-.ilustration {
-  width: 100%;
-  height: 100vh;
+.getInTouch {
+  width: 10%;
+  height: 5vh;
+  color: $offWhite;
+  cursor: pointer;
+  border: $line;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  margin-left: 8%;
+  margin-top: 30%;
+  animation-name: slideButton;
+  animation-duration: .5s;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s ease;
+}
+
+.getInTouch:hover {
+  background-color: $offWhite;
+  color: $mainColor;
+  transition: .5s ease;
+  border: none;
+
 }
 
 
-.drawing {
-  display: grid;
-  grid-template-columns: 100%;
-  height: 90vh;
-  margin-left: 40%;
-  margin-top: 21.5vh;
-  padding: 0 0;
-}
+.main img {
+  max-width: 60%;
+  min-width: 55%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 
-.drawing img {
-  width: 100%;
 }
 
 .skills {
@@ -135,8 +199,6 @@ $line: 1px solid rgba(253,251,245,.3);
   padding-top: 80px;
   background-color: $mainColor;
   width: 100%;
-
-
 }
 
 .left {
@@ -150,11 +212,11 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .skillGrid {
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 30vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   margin-top: 5%;
-  height: 60vh;
+  height: 30vw;
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: .5em;
@@ -166,9 +228,11 @@ $line: 1px solid rgba(253,251,245,.3);
 .photoGrid {
   width: 100%;
   height: 100%;
-  background-color: white;
+}
 
-
+.photoGrid img {
+  width: 100%;
+  height: 100%;
 }
 
 .slideAppear {
@@ -181,7 +245,7 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .goodAt {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 60%;
   width: 74%;
   margin-left: 13%;
@@ -193,14 +257,15 @@ $line: 1px solid rgba(253,251,245,.3);
   color: $offWhite;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 40px;
+  font-size: 3em;
   font-weight: 400;
+  margin-bottom: 7%;
 
 }
 
 .iconGrid {
   margin-top: 2%;
-  width: 90%;
+  width: 80%;
   margin-right: 10%;
   height: 100%;
   display: grid;
@@ -210,15 +275,43 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .icon {
   width: 100%;
-  height: 100%;
+  height: 12vh;
   border: $line;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.icon img {
+  height: 60%;
+}
+
+.icon p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  font-weight: 300;
+  color: $offWhite;
+}
+
+.iconLeft {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.iconRight {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .projects {
   width: 100%;
   text-align:center;
   background-color: $offWhite;
-  padding-bottom: 15vh;
+  padding-bottom: 5vh;
 }
 
 .projects h1 {
@@ -226,7 +319,7 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-bottom: 20vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 50px;
+  font-size: 3.2em;
   font-weight: 400;
   color: $secondaryColor;
 }
@@ -235,10 +328,12 @@ $line: 1px solid rgba(253,251,245,.3);
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  height: 50vh;
+  margin-bottom: 25vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 50% 50%;
 }
+
 
 .project {
   align-content: left;
@@ -248,19 +343,19 @@ $line: 1px solid rgba(253,251,245,.3);
   margin-bottom: 4vh;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.3em;
   color: $secondaryColor;
 }
 
 .project div {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 1.2em;
+  font-weight: 300;
   color: $mainColor;
 
 }
 .projectInfo {
-  width: 65%;
-  margin-right: 25%;
+  width: 70%;
   margin-top: 3vh;
 }
 
@@ -279,11 +374,11 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 
+
+
 .imageNums {
   margin-top: 3vh;
   width: 109%;
-  // display: grid;
-  // grid-template-columns: 25% 25% 25% 25%;
   display: flex;
   justify-content: space-between;
   align-content: left;
@@ -291,21 +386,46 @@ $line: 1px solid rgba(253,251,245,.3);
 
 
 
-
-
 }
 
 .num {
   width: 50%;
-  // border-bottom: 1px solid $mainColor;
   padding-bottom: 1vh;
   text-align: right;
   cursor: pointer;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  font-style: thin;
+  font-weight: 300;
   color: $mainColor;
   margin-right: 8%;
+  letter-spacing: .1vw;
+}
+
+.projectTypes {
+  margin-top: 18%;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-content: left;
+}
+
+.type {
+  width: 10vw;
+  display: flex;
+  border: 1px solid rgba(44, 53, 60, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+
+}
+.type h5 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  font-size: .6em;
+  letter-spacing: .05em;
+  text-align: center;
+  color: $mainColor;
 
 
 }
@@ -335,16 +455,19 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .profileImage {
-  width: 100%;
+
   height: 100vh;
   overflow: hidden;
   margin-bottom: 0;
+  position: relative;
 }
 
 .profileImage img {
   width: 100%;
   margin-bottom: 0;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
 
 }
 
@@ -358,40 +481,49 @@ $line: 1px solid rgba(253,251,245,.3);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 3.2em;
   color: $offWhite;
   margin-top: 20%;
   margin-left: 15%;
 }
 
+
+
 .aboutDetails p {
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 1.1em;
   font-weight: 300;
   color: $offWhite;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-left: 15%;
-  width: 45%;
+  width: 60%;
 }
 
 .favorites {
   width: 50%;
+  padding: 2% 2%;
   margin-left: 15%;
   margin-top: 5vh;
   border: $line;
+
 }
 .favBox {
-  padding-top: 5%;
-  padding-bottom: 3%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
 
 }
 .favorites p {
+  text-align: left;
   width: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  margin-left: 7%;
-  margin-top: 0;
-  margin-bottom: 2%;
+  font-weight: 300;
+  letter-spacing: .1vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  color: $lightBlue;
+
 }
 
 .tools {
@@ -406,7 +538,8 @@ $line: 1px solid rgba(253,251,245,.3);
   color: $mainColor;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 3.5em;
   text-align: center;
   display: flex;
   align-items: center;
@@ -416,8 +549,51 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .tech {
   width: 100%;
-  height: 50%;
+  height: 40vh;
   background-color: $offWhite;
+
+
+}
+
+.techBox {
+  width: 85%;
+  height: 40vh;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+
+}
+
+.adobe {
+  height: 40vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.adobe img {
+  height: 25%;
+}
+
+.coffee {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee img {
+  height: 50%;
+}
+
+.microsoft {
+  height: 40vh;
+
+}
+.microsoft img {
+  margin-top: 27%;
+  height: 30%;
+  float: right;
 }
 
 .contact {
@@ -430,7 +606,7 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .form {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: $mainContrast;
   display: grid;
   grid-template-columns: 100%;
@@ -441,6 +617,58 @@ $line: 1px solid rgba(253,251,245,.3);
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
+  overflow: hidden;
+}
+
+.popup {
+  margin-top: 16%;
+  margin-left: 3vw;
+  color: $offWhite;
+  width: 80%;
+  animation-name: softFade;
+  animation-duration: 2s;
+
+}
+
+.popup img {
+  height: 12%;
+  margin-left: 13vw;
+  margin-bottom: 10%;
+
+}
+
+@keyframes fly {
+  from {margin-bottom: 0%; opacity: 0}
+  to {margin-bottom: 10%; opacity: 1}
+}
+@keyframes softFade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+
+
+
+.popup h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Old Standard TT', serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-style: italic;
+
+}
+
+.popup h3 {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+
 }
 
 
@@ -449,14 +677,14 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .message {
   width: 100%;
-  height: 25vh;
+  height: 22vh;
   background-color: $mainContrast;
   border: $line;
   margin-bottom: 3vh;
   padding-left: 5%;
   padding-bottom: 22%;
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: $offWhite;
   outline: none;
 
@@ -465,20 +693,20 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .small {
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   background-color: $mainContrast;
   border: $line;
   margin-bottom: 3vh;
   padding-left: 5%;
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: $offWhite;
   outline: none;
 }
 
 
 input[type=submit] {
-  width: 20%;
+  width: 30%;
   height: 5vh;
   padding: 0 0;
   text-align: center;
@@ -488,9 +716,20 @@ input[type=submit] {
   border: $line;
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
+  transition: .5s ease;
+
 }
+
+input[type=submit]:hover {
+  background-color: $offWhite;
+  color: $mainColor;
+  border: none;
+  transition: .5s ease;
+}
+
+
 
 
 
@@ -506,6 +745,23 @@ input[type=submit] {
 .workTogether {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.workTogether img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.fade {
+  background-color: $mainColor;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
 }
 
 .workTogether h1 {
@@ -516,15 +772,33 @@ input[type=submit] {
   width: 70%;
   margin-left: 13%;
   margin-top: 30%;
+  color: $offWhite;
 
 }
 
 .workTogether h4 {
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   margin-left: 13%;
   margin-top: 5%;
+  color: $offWhite;
+
+}
+
+.social {
+  margin-top: 3%;
+  margin-left: 13%;
+  width: 20%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social a {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
 
 }
 
@@ -542,14 +816,14 @@ input[type=submit] {
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 40vh;
+  height: 30vh;
 }
 
 .footer h2 {
   margin-left: 18%;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-  margin-top: 32%;
+  margin-top: 25%;
   color: $offWhite;
   font-size: 16px;
 
@@ -566,11 +840,705 @@ input[type=submit] {
   font-family: 'Old Standard TT', serif;
   font-style: italic;
   color: $offWhite;
-  margin-top: 32%;
-
-
+  margin-top: 25%;
 
 }
+
+@media (max-width: 1024px) {
+
+  .navLinks {
+    padding-left: 0%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navLinks li {
+    padding-left: 0;
+  }
+  .hi {
+    font-size: 2.5rem;
+    animation-name: slideHeadIpad;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .info {
+    font-size: 1.2rem;
+    animation-name: slideInfoIpad;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 3.2vh;
+  }
+  .getInTouch {
+    font-size: 1em;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%;
+    animation-name: slideButtonIpad;
+  }
+
+  .line {
+    width: 90%;
+    height: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    border-top: none;
+  }
+
+  .main img {
+    max-width: 200%;
+    height: 68%;
+    position: absolute;
+    bottom: 0;
+    left: -10vw;
+  }
+  .skills {
+    padding-top: 0vh;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .left {
+    padding-top: 0px;
+    height: 100vw;
+  }
+  .skillGrid {
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    row-gap: 0em;
+    column-gap: 0em;
+  }
+
+  .right {
+    padding-top: 10vh;
+    height: 80vh;
+  }
+
+
+  .goodAt {
+    margin-top: 1px;
+    height: 60vh;
+  }
+  .goodAt h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .iconGrid {
+    margin-top: 0%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    row-gap: .1em;
+    height: 45vh;
+
+  }
+
+  .icon {
+    height: 10vh;
+  }
+
+  .iconLeft {
+    height: 10vh;
+  }
+
+  .icon p {
+    font-size: 1.2rem;
+  }
+
+  .projects {
+    margin-top: 50vh;
+    margin-bottom: 0vh;
+  }
+  .projects h1 {
+    padding-top: 15vh;
+    margin-bottom: 5vh;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .projects h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  .project div {
+    font-size: 1.2rem;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+  .carousel {
+    grid-template-columns: 100%;
+    margin-bottom: 14vh;
+  }
+
+  .projectTypes {
+    margin-top: 8%;
+    margin-bottom: 8vh;
+
+  }
+
+  .type {
+    width: 15vh;
+  }
+
+  .type h5 {
+    font-size: 1rem;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 100%;
+  }
+
+  .profileImage {
+
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .profileImage img {
+    position: absolute;
+    bottom: -5vh;
+
+  }
+
+  .aboutMe {
+    height: 80vh;
+
+  }
+
+  .aboutDetails {
+    height: 80vh;
+
+  }
+
+  .aboutDetails h1 {
+    margin-top: 5vh;
+    font-size: 2.5rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+
+
+  }
+
+  .aboutDetails p {
+    margin-top: 3vh;
+    font-size: 1.2rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 1.5;
+  }
+
+  .favorites {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 1vh 0;
+  }
+
+
+  .favBox p {
+    margin-top: 0vh;
+    width: 90%;
+    margin-left: 7%;
+    margin-right: 5%;
+    font-size: 1.1rem;
+  }
+
+  .tools {
+    margin-top: 60vh;
+    height: 60vh;
+  }
+
+  .myTools {
+    font-size: 2rem;
+    height: 20vh;
+  }
+
+  .tech {
+    height: 80vh;
+  }
+
+  .techBox {
+    grid-template-columns: 100%;
+    height: 100%;
+
+  }
+
+  .adobe {
+    width: 100%;
+    margin-top: 10vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .adobe img {
+    height: 80%;
+  }
+
+  .coffee {
+    height: 30vh;
+  }
+
+  .coffee img {
+    height: 80%;
+  }
+
+  .microsoft {
+    margin-top: 3%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+
+  .microsoft img {
+    margin-top: 0%;
+    height: 80%;
+    float: none;
+  }
+
+  .contact {
+    grid-template-columns: 100%;
+    height: 100vh;
+  }
+
+  .form {
+    height: 110vh;
+  }
+
+  .contactForm {
+    margin-top: 15vh;
+  }
+  ::placeholder {
+    font-size: 1.3rem;
+  }
+  input[type=submit] {
+    width: 50%;
+    height: 5vh;
+    font-size: 1.3rem;
+  }
+  .small {
+    height: 12vh;
+    margin-bottom: 5vh;
+    font-size: 1rem;
+  }
+  .message {
+    font-size: 1.3rem;
+  }
+
+
+  .workTogether {
+    margin-top: 40vh;
+    height: 90vh;
+  }
+
+  .workTogether img {
+    min-height: 100%;
+  }
+
+  .social {
+    width: 20%;
+  }
+
+  .workTogether h1 {
+    margin-top: 5;
+  }
+  .footer {
+    height: 0vh;
+    grid-template-columns: 100%;
+    background-color: $mainColor;
+    margin-bottom: 0vh;
+  }
+
+  .footer h2 {
+    text-align: center;
+    width: 0%;
+    margin-bottom: 0%;
+    opacity: 0;
+
+  }
+
+  .footNav ul {
+    margin-top: 105vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .nav {
+    padding-top: 3vh;
+    min-height: 30px;
+    justify-content: center;
+  }
+  .navLinks {
+    padding-left: 0%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navLinks li {
+    padding-left: 0;
+  }
+  .hi {
+    font-size: 2rem;
+    animation-name: slideHeadMobile;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .info {
+    font-size: .9rem;
+    animation-name: slideInfoMobile;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 3.2vh;
+  }
+  .getInTouch {
+    font-size: .6em;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%;
+    animation-name: slideButtonMobile;
+  }
+
+  .line {
+    width: 90%;
+    height: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    border-top: none;
+  }
+
+  .main img {
+    max-width: 200%;
+    height: 62%;
+    position: absolute;
+    bottom: 0;
+    left: -22vw;
+  }
+  .skills {
+    padding-top: 0vh;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .left {
+    padding-top: 0px;
+    height: 100vw;
+  }
+  .skillGrid {
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    row-gap: 0em;
+    column-gap: 0em;
+  }
+
+  .right {
+    padding-top: 10vh;
+    height: 80vh;
+  }
+
+
+  .goodAt {
+    margin-top: 1px;
+    height: 60vh;
+  }
+  .goodAt h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .iconGrid {
+    margin-top: 0%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    row-gap: .1em;
+    height: 45vh;
+
+  }
+
+  .icon {
+    height: 10vh;
+  }
+
+  .iconLeft {
+    height: 10vh;
+  }
+
+  .icon p {
+    font-size: .8rem;
+  }
+
+  .projects {
+    margin-top: 30vh;
+    margin-bottom: 0vh;
+  }
+  .projects h1 {
+    padding-top: 15vh;
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .projects h3 {
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  .project div {
+    font-size: .7rem;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+  .carousel {
+    grid-template-columns: 100%;
+    margin-bottom: 14vh;
+  }
+
+  .projectTypes {
+    margin-top: 5%;
+    margin-bottom: 8vh;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 100%;
+  }
+
+  .profileImage {
+
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .profileImage img {
+    position: absolute;
+    bottom: -5vh;
+
+  }
+
+  .aboutMe {
+    height: 80vh;
+
+  }
+
+  .aboutDetails {
+    height: 80vh;
+
+  }
+
+  .aboutDetails h1 {
+    margin-top: 5vh;
+    font-size: 2rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+
+
+  }
+
+  .aboutDetails p {
+    margin-top: 3vh;
+    font-size: .8rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .favorites {
+    width: 63%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 1vh 0;
+  }
+
+
+  .favBox p {
+    margin-top: 0vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: .8rem;
+  }
+
+  .tools {
+    margin-top: 60vh;
+    height: 60vh;
+  }
+
+  .myTools {
+    font-size: 2rem;
+    height: 20vh;
+  }
+
+  .tech {
+    height: 80vh;
+  }
+
+  .techBox {
+    grid-template-columns: 100%;
+    height: 100%;
+
+  }
+
+  .adobe {
+    width: 80%;
+    margin-top: 10vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 10vh;
+  }
+
+  .adobe img {
+    height: 80%;
+  }
+
+  .coffee {
+    height: 15vh;
+  }
+
+  .coffee img {
+    height: 80%;
+  }
+
+  .microsoft {
+    margin-top: 3%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .microsoft img {
+    margin-top: 0%;
+    height: 80%;
+    float: none;
+  }
+
+  .contact {
+    grid-template-columns: 100%;
+    height: 100vh;
+  }
+
+  .form {
+    height: 110vh;
+  }
+
+  .contactForm {
+    margin-top: 15vh;
+  }
+  ::placeholder {
+    font-size: 1rem;
+  }
+  input[type=submit] {
+    width: 50%;
+    height: 5vh;
+    font-size: 1rem;
+  }
+  .small {
+    height: 10vh;
+    margin-bottom: 5vh;
+    font-size: 1rem;
+  }
+  .message {
+    font-size: 1rem;
+    height: 20vh;
+  }
+
+
+  .workTogether {
+    margin-top: 40vh;
+    height: 90vh;
+  }
+
+  .workTogether img {
+    min-height: 100%;
+  }
+
+  .social {
+    width: 40%;
+  }
+
+  .workTogether h1 {
+    margin-top: 5;
+  }
+  .footer {
+    height: 0vh;
+    grid-template-columns: 100%;
+    background-color: $mainColor;
+    margin-bottom: 0vh;
+  }
+
+  .footer h2 {
+    text-align: center;
+    width: 0%;
+    margin-bottom: 0%;
+    opacity: 0;
+
+  }
+
+  .footNav ul {
+    margin-top: 105vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+}
+
+
+
 
 
 
