@@ -845,6 +845,12 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 1024px) {
+  .main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
 
   .navLinks {
     padding-left: 0%;
