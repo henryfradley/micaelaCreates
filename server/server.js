@@ -5,7 +5,7 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const credentials = require('../dev_config.js');
-const port = 3000;
+const port = 80;
 
 let transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
