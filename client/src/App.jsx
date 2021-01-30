@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import styles from './styles.module.scss';
 
 import Main from '../components/Main.jsx';
 import Skills from '../components/Skills.jsx';
@@ -77,7 +78,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className={styles.mainApp}>
         <Main scroll={this.scroll} logo={Logo}/>
         <Skills showElement={this.showElement} />
         <Projects data={projectData} />

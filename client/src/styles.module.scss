@@ -17,6 +17,12 @@ $line: 1px solid rgba(253,251,245,.3);
   }
 
 
+  .mainApp {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh;
+  }
+
   .main {
     margin-top: 0px;
     padding: 0 0;
@@ -751,6 +757,7 @@ input[type=submit]:hover {
 }
 
 .workTogether img {
+  min-height: 100%;
   width: 100%;
   position: absolute;
   bottom: 0;
