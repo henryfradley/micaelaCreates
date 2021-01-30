@@ -507,17 +507,19 @@ $line: 1px solid rgba(253,251,245,.3);
 }
 
 .favorites {
-  width: 50%;
-  padding: 2% 2%;
+  width: 48%;
+  padding: .3vh .3vh;
   margin-left: 15%;
   margin-top: 5vh;
   border: $line;
 
 }
 .favBox {
+  margin-top: .5vh;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
+  margin-bottom: .5vh;
 
 }
 .favorites p {
@@ -527,7 +529,7 @@ $line: 1px solid rgba(253,251,245,.3);
   font-size: 16px;
   font-weight: 300;
   letter-spacing: .1vw;
-  margin-top: 1%;
+  margin-top: .2vh;
   margin-left: 1%;
   color: $lightBlue;
 
