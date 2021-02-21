@@ -3,6 +3,9 @@ import styles from '../src/styles.module.scss';
 import Carousel from './Carousel.jsx';
 import Fade from 'react-reveal/Fade';
 
+
+
+
 const Projects = function(props) {
 
   let data = props.data.projectData;
