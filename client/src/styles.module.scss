@@ -33,9 +33,6 @@ $line: 1px solid rgba(253,251,245,.3);
 
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   min-height: 60px;
 }
 .line {
@@ -50,17 +47,19 @@ $line: 1px solid rgba(253,251,245,.3);
 .navLinks {
   display: flex;
   list-style: none;
-  padding-left: 45%;
+  margin-left: 45%;
+  margin-right: 5%;
+  justify-content: space-between;
 
 }
 
 
 
 .navLinks li {
-  padding-left: 7rem;
+  margin-top: 4vh;
+  width: fit-content;
   font-family: 'Old Standard TT', serif;
   font-style: italic;
-
 }
 
 .navText {
@@ -176,12 +175,11 @@ $line: 1px solid rgba(253,251,245,.3);
   transition: .5s ease;
 }
 
-.getInTouch:hover {
+.getInTouch:hover, p {
   background-color: $offWhite;
   color: $mainColor;
   transition: .5s ease;
   border: none;
-
 }
 
 
@@ -253,7 +251,7 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .goodAt {
   margin-top: 5%;
-  height: 60%;
+  min-height: 600px;
   width: 74%;
   margin-left: 13%;
   margin-right: 13%;
@@ -442,7 +440,6 @@ $line: 1px solid rgba(253,251,245,.3);
   border-bottom: 1px solid rgba(44, 53, 60, .5);
   height: 1vh;
   transition: .2s;
-
 }
 
 .num:hover .slider{
@@ -453,7 +450,6 @@ $line: 1px solid rgba(253,251,245,.3);
 
 .aboutMe {
   width: 100%;
-  max-height: 100vh;
 }
 
 .aboutGrid {
@@ -1047,7 +1043,6 @@ input[type=submit]:hover {
 
   .aboutDetails {
     height: 80vh;
-
   }
 
   .aboutDetails h1 {
